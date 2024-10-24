@@ -1,7 +1,3 @@
-#Họ tên: Trần Tú Quyên
-#MSSV: B2113317
-#STT: 42
-
 from tkinter import *
 import tkinter as tk
 from Crypto. PublicKey import RSA 
