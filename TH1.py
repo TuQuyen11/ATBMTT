@@ -74,11 +74,14 @@ def mahoa():
 #Giải mã
 def xgcd(a, m):
     temp = m
-    x0, x1, y0, y1 = 1, 0, 0, 1
+    x0, x1 = 1, 0
+    y0, y1 = 0, 1
     while m != 0:
         q, a, m = a // m, m, a % m
-        x0, x1 = x1, x0 - q * x1
-        y0, y1 = y1, y0 - q * y1
+        x0 = x1
+        x1 = x0 - q * x1
+        y0 = y1 
+        y1 = y0 - q * y1
         if x0 < 0:
             x0 = temp+x0
     return x0
