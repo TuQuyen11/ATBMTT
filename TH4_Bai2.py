@@ -21,7 +21,7 @@ lb2.grid(column=0, row=2)
 password = Entry(window, show="*", width=100)  # Ẩn mật khẩu
 password.grid(column=1, row=2)
 
-# Định nghĩa hàm chọn thuật toán
+# Định nghĩa hàm chọn thuật toán và mã hóa mật khẩu
 def hash_password(password):
     hash_algorithms = ['md5', 'sha1', 'sha256', 'sha512']
     chosen_algorithm = random.choice(hash_algorithms)  # Chọn ngẫu nhiên 1 thuật toán băm
