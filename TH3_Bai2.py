@@ -3,7 +3,8 @@ import random
 
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        a = b
+        b = a % b
     return a
 
 def mod_inverse(e, phi):
@@ -11,7 +12,8 @@ def mod_inverse(e, phi):
     x0, x1 = 0, 1
     while e > 1:
         q = e // phi
-        phi, e = e % phi, phi
+        phi = e % phi
+        e = phi
         x0, x1 = x1 - q * x0, x0
     if x1 < 0:
         x1 += original_phi
@@ -26,8 +28,8 @@ def is_prime(n):
     #loại bỏ số chẵn và bội của 3
     if n % 2 == 0 or n % 3 == 0: 
         return False 
-    i = 5
     #kiểm tra căn bậc 2 của n
+    i = 5
     while i * i <= n:
         if n % i == 0 or n % (i + 2) == 0:
             return False
